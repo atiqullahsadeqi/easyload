@@ -92,6 +92,7 @@ body{
     position: relative;
     perspective: 670px;
     z-index: 4343;
+    overflow: hidden;
 }
 .anim .pic{
     display: flex;
@@ -111,13 +112,23 @@ body{
     font-size: 30px;
     color: white;
     opacity: 0;
+    position: absolute;
+}
+.left,
+.right{
+    position: relative;
+}
+.cap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .tep1 span{
     font-size: 40px;
 }
 .bcheck,
-.bcard,
-.cap{
+.bcard{
     font-size: 18px;
     z-index: 3333;
     position: absolute;
@@ -276,8 +287,14 @@ section h1{
     color: #F83F07 !important;
     
 }
+.left,
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media only screen and (max-width: 768px) {
- 
+   
     .nave{
         z-index: 45545;
     }
@@ -361,13 +378,20 @@ section h1{
     tbody tr{
         font-size: 1em;
     }
+    
 }
 @media only screen and (max-width: 1024px) {
-    .anim{
-        flex-direction: column;
+    
+    .left,
+    .right{
+        display: none !important;
     }
     .pic{
-        width: 50%;
+        width: 50% !important;
+    }
+    .bcheck,
+    .bcard{
+        font-size: 25px;
     }
 }
 @media only screen and (max-width: 1190px) {

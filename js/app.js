@@ -69,7 +69,7 @@ tlfScroll
 .set('.pic' , {scale: 0.9 ,transformOrigin: "center top" , y:"50%"})
 .to('.pic' , 1 , {scale:0.7 , y:"-10%"})
 .to('.pic' , 3 , {scale:0.6 , y:"0%"})
-.to('.tep1' , 3 , {opacity:"1", left:"20%"} , "-=3")
+.to('.tep1' , 3 , {opacity:"1", left:"25%"} )
 
 var controller = new ScrollMagic.Controller();
 
@@ -85,15 +85,15 @@ var tlsScroll = new TimelineMax();
 
 tlsScroll
 .to('.bcheck' , 3 , {opacity:"1"})
-.to('.tep1s' , 3 , {opacity:"1", left:"70%"} , "-=3")
-.to('.tep1' , 2 , {opacity:"0", left:"50%"} )
-.to('.tep1s' , 2 , {opacity:"0", left:"50%"} )
+.to('.tep1s' , 3 , {opacity:"1", left:"15%"} , "-=3")
+.to('.tep1' , 2 , {opacity:"0", left:"0%"} )
+.to('.tep1s' , 2 , {opacity:"0", left:"0%"} )
 .to('.bcheck' , 1 , {opacity:"0"})
 .to('.tep2' , 3 , {opacity:"1" , left:"25%"})
 .to('.bcard' , 3 , {opacity:"1"})
-.to('.tep2s' , 3 , {opacity:"1", left:"75%"} , "-=3")
-.to('.tep2' , 2 , {opacity:"0", left:"50%"} )
-.to('.tep2s' , 2 , {opacity:"0", left:"50%"} )
+.to('.tep2s' , 3 , {opacity:"1", left:"-5%"} , "-=3")
+.to('.tep2' , 2 , {opacity:"0", left:"0%"} )
+.to('.tep2s' , 2 , {opacity:"0", left:"0%"} )
 .to('.bcard' , 1 , {opacity:"0"} , "-=3")
 .to('.pic' , 3 , {transform:" rotateY(90deg)"})
 .to('.pic' , 3 , {display:"none"} , "-=2")
