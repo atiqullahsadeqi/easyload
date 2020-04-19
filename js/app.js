@@ -66,9 +66,9 @@ responsive:{
 var tlfScroll = new TimelineMax();
 
 tlfScroll
-.set('.pic' , {scale: 0.9, transformOrigin: "center top"})
+.set('.pic' , {scale: 0.9 ,transformOrigin: "center top" , y:"50%"})
 .to('.pic' , 1 , {scale:0.7 , y:"-10%"})
-.to('.pic' , 3 , {scale:0.4 , y:"0%"})
+.to('.pic' , 3 , {scale:0.6 , y:"0%"})
 .to('.tep1' , 3 , {opacity:"1", left:"20%"} , "-=3")
 
 var controller = new ScrollMagic.Controller();
@@ -79,7 +79,6 @@ var scene1 = new ScrollMagic.Scene({
     duration: "100%"
 })
 .setTween(tlfScroll)
-.addIndicators()
 .addTo(controller);
 
 var tlsScroll = new TimelineMax();
@@ -106,9 +105,11 @@ var scene2 = new ScrollMagic.Scene({
 })
 .setTween(tlsScroll)
 .setPin('.trigger2')
-.addIndicators()
 .addTo(controller);
 
+$(".men").click(function(){
+    $(".menu").toggleClass("show");
+});
 // var tltScroll = new TimelineMax();
 
 // tltScroll

@@ -8,6 +8,9 @@ body{
     font-family: sans-serif;
     background-color: aliceblue;
 }
+.hum{
+    display: none;
+}
 .logo{
     width: 20%;
     display: flex;
@@ -40,9 +43,6 @@ body{
     -webkit-backdrop-filter: blur(3px);
     display: flex;
     position: fixed;
-    /* border-bottom: 2px solid #0C96BB; */
-    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
     top: 0 !important;
     z-index: 232;
 }
@@ -97,10 +97,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 10%;
+    transform-origin: center center !important;
     border-radius: 15px;
-    overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
@@ -110,10 +108,6 @@ body{
 .tep2,
 .tep2s,
 .cap{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
     font-size: 30px;
     color: white;
     opacity: 0;
@@ -122,7 +116,8 @@ body{
     font-size: 40px;
 }
 .bcheck,
-.bcard{
+.bcard,
+.cap{
     font-size: 18px;
     z-index: 3333;
     position: absolute;
@@ -132,7 +127,7 @@ body{
     color: gray;
 }
 .trigger1{
-    height: 100vh;
+    min-height: 100vh;
     align-self: center;
 }
 section h1{
@@ -280,4 +275,106 @@ section h1{
 .social span:hover i{
     color: #F83F07 !important;
     
+}
+@media only screen and (max-width: 768px) {
+ 
+    .nave{
+        z-index: 45545;
+    }
+    .anim{
+        z-index: 76767;
+    }
+    .menu{
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        right: 0;
+        background: #0C96BB;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s;
+    }
+    .show{
+        opacity: 1;
+        pointer-events: all;
+    }
+    .hum{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .liste{
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+    .list-iteme{
+        height: 100%;
+        width: 100%;
+    }
+    .nav-linke{
+       color: white;
+        transition: 0.2s;
+    }
+    .logo{
+        width: 100%;
+    }
+    .conatct{
+        width: 100%;
+    }
+    .nav-tabs{
+        justify-content: space-around !important;
+    }
+    .nav-tabs li{
+        margin-top: 10px;
+    }
+    .container{
+        width: 100% !important;
+    }
+    .card-holder{
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .card,
+    .card-b{
+        margin-top: 10px;
+    }
+    .info h1 {
+        font-size: 25px;
+        margin-left: 20px;
+    }
+    .info h1 code{
+        font-size: 30px;
+    }
+    thead tr{
+        font-size: 1.5em;
+    }
+    tbody tr{
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .anim{
+        flex-direction: column;
+    }
+    .pic{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 1190px) {
+    .know{
+        margin-top: 65px !important;
+    }
+    .social{
+        width: 100% !important;
+    }
 }
